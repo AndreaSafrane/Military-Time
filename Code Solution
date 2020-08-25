@@ -1,0 +1,17 @@
+#Input Format
+#A string that includes the time, then a space and the indicator for AM or PM.
+
+#Output Format 
+#A string that includes the time in a 24 hour format (XX:XX)
+
+time = input("")
+
+from datetime import datetime
+
+format = "%I:%M %p"
+
+my_time = datetime.strptime(time, format)
+
+format1 = "%H:%M"
+
+print(my_time.strftime(format1))
